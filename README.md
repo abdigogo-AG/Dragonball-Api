@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Una aplicación web moderna construida con Next.js y Tailwind CSS que explora el universo de Dragon Ball. Consume datos en tiempo real de una API pública para mostrar información detallada sobre personajes, niveles de poder y transformaciones.
 
-## Getting Started
+## Características Principales
 
-First, run the development server:
+1. Cada visita a la página principal muestra 20 personajes diferentes generados al azar (SSR).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Detalle de Personaje: Vista profunda con estadísticas (Ki, Raza, Género), historia y planeta de origen.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Galería de Transformaciones: Carrusel interactivo con todas las fases del personaje.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Diseño Responsive: Interfaz adaptada a móviles y escritorio con estética "Dark Mode" inspirada en el anime.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Tecnologías Utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Framework:[Next.js 15](https://nextjs.org/) (App Router)
+2. Lenguaje: [TypeScript](https://www.typescriptlang.org/)
+3. Estilos: [Tailwind CSS](https://tailwindcss.com/)
+4. Datos: [Dragon Ball API](https://web.dragonball-api.com/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Instalación y Uso
 
-## Deploy on Vercel
+Sigue estos pasos para correr el proyecto en tu máquina local:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/TU_USUARIO/TU_REPOSITORIO.git](https://github.com/TU_USUARIO/TU_REPOSITORIO.git)
+    cd dragonball-project
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
+
+**Configuración de Imágenes:**
+    Asegúrate de que tu archivo `next.config.ts` permita el dominio de la API:
+    ```typescript
+    const nextConfig = {
+      images: {
+        remotePatterns: [
+          { protocol: "https", hostname: "dragonball-api.com" },
+        ],
+      },
+    };
+    ```
+
+4.  **Correr el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+
+5.  Abre [http://localhost:3000/dragonball](http://localhost:3000/dragonball) en tu navegador.
+
+
+
